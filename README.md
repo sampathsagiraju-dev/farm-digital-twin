@@ -26,7 +26,6 @@ reduces rainfall by 50%, enabling an apples-to-apples comparison.
 Python 3.10 or newer is recommended.
 
 ```powershell
-cd "C:\Users\sampa\OneDrive\Documents\New project\farm-digital-twin"
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
