@@ -55,6 +55,20 @@ python -c "from twin.simulator import run_simulation; print(run_simulation('Drou
 
 All dependencies are open source: NumPy, pandas, Streamlit, and Matplotlib.
 
+## Testing
+
+The project has a pytest suite covering the weather generator, the pasture and
+soil-water equations, domain validation, scenario orchestration, Monte Carlo
+uncertainty, and SQLite persistence.
+
+```powershell
+python -m pip install -r requirements-dev.txt
+python -m pytest
+```
+
+Tests also run automatically on every push and pull request via GitHub
+Actions (`.github/workflows/tests.yml`).
+
 ## Backend v2
 
 The twin now supports paddock domain objects and soil presets, dated irrigation,

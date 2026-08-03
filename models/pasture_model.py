@@ -16,6 +16,12 @@ class ModelParameters:
     drainage_factor: float = 0.12
     senescence_rate: float = 0.008
 
+    def __post_init__(self) -> None:
+        if self.field_capacity <= self.wilting_point:
+            raise ValueError("field_capacity must be greater than wilting_point")
+        if self.base_growth < 0:
+            raise ValueError("base_growth cannot be negative")
+
 def temperature_stress(temperature: float) -> float:
     """Return heat stress above 25 C."""
     return max(0.0, float(temperature) - 25.0)
